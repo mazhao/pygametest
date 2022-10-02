@@ -31,8 +31,10 @@ def run_game():
         print("main loop go on!")
         gf.check_events(ai_settings, screen, ship, bullets)
         ship.update()  # 更新飞船状态
-        bullets.update() # 更新子弹状态
+
+        gf.update_bullets(bullets)
         gf.update_screen(ai_settings, screen, ship, bullets)  # 绘制屏幕
+
 
 
 if __name__ == '__main__':
